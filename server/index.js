@@ -16,7 +16,10 @@ mongoose
   });
 app.use(cookieParser())
 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: 'https://shorturlfrontend.vercel.app', // Allow only your frontend
+  credentials: true, // Enable credentials (cookies, authentication headers)
+}));
 app.use(express.json());
 
 app.use("/",authRoutes)
