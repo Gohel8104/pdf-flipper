@@ -16,7 +16,7 @@ mongoose
   });
 app.use(cookieParser())
 
-app.use(cors({ origin: 'https://shorturlfrontend.vercel.app' }));
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 app.use("/",authRoutes)
